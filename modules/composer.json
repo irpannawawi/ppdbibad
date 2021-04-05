@@ -1,0 +1,12 @@
+{
+    "name": "nawawi/modules",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.17"
+    },
+    "authors": [
+        {
+            "name": "Irpan Nawawi",
+            "email": "irpannawawi.ixd@gmail.com"
+        }
+    ]
+}
