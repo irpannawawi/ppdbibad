@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '5576018506e8fd9aadef02bdfd35116259345f77',
     'name' => 'nawawi/modules',
   ),
   'versions' => 
@@ -82,12 +82,12 @@ private static $installed = array (
     ),
     'nawawi/modules' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '5576018506e8fd9aadef02bdfd35116259345f77',
     ),
     'phpoffice/phpspreadsheet' => 
     array (

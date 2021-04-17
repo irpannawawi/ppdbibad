@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 function enkripsi( $string )
 {
     $output = false;
@@ -38,16 +38,16 @@ function dekripsi($string)
 
     return $output;
 }		
+	session_start();
     session_cache_expire(0);
     session_cache_limiter(0);
-	session_start();
 	set_time_limit(0);
 	date_default_timezone_set('Asia/Jakarta');
 	(isset($_SESSION['id_user'])) ? $id_user = $_SESSION['id_user'] : $id_user = 0;
 	
 	//$ref = $_SERVER['HTTP_REFERER'];
 
-	(isset($_SERVER['HTTP_REFERER'])) ? $ref = $_SERVER['HTTP_REFERER']:$ref=null;
+	$ref = $_SERVER['HTTP_REFERER'];
 	$uri = $_SERVER['REQUEST_URI'];
 	$pageurl = explode("/",$uri);
 $homeurl = "https://".$_SERVER['HTTP_HOST'];
@@ -66,13 +66,13 @@ $homeurl = "https://".$_SERVER['HTTP_HOST'];
 
 	
 	$host = 'localhost';
-	$user = 'root';
-	$pass = 'Penirahayu3';
-	$debe = 'ppdbibad';
+	$user = 'liwvzvgu_ppdb';
+	$pass = 'liwvzvgu_ppdb';
+	$debe = 'liwvzvgu_ppdb';
 	
 
 	$koneksi=mysql_connect($host,$user,$pass) or die(mysql_error());
-	mysql_select_db($debe);
+	$pilihdb=mysql_select_db($debe,$koneksi);
 	
 	$no = $jam = $mnt = $dtk = 0;
 	$info = '';
@@ -82,6 +82,6 @@ $homeurl = "https://".$_SERVER['HTTP_HOST'];
 	
 	$setting = mysql_fetch_array(mysql_query("SELECT * FROM setting WHERE id_setting='1'"));
 	$sess = mysql_fetch_array(mysql_query("SELECT * FROM session WHERE id='1'"));
-	$sql = "select * from daftar";
-	// print_r(mysql_fetch_array(mysql_query($sql)));				
+							
+							
 ?>

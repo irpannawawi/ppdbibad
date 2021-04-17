@@ -25,7 +25,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `agenda`
 --
-
+CREATE DATABASE IF NOT EXISTS   `ppdbibad`; 
+Use `ppdbibad`;
 CREATE TABLE `agenda` (
   `id_agenda` int(3) NOT NULL,
   `judul` varchar(100) NOT NULL,

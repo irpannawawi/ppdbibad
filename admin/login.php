@@ -2,7 +2,7 @@
 require("../config/config.default.php");
 	require("../config/config.function.php");
 	
-	$ceks = mysqli_fetch_array(mysqli_query($koneksi,"select * from setting"));
+	$ceks = mysql_fetch_array(mysql_query("select * from setting"));
 	
 	$namaaplikasi = $ceks['aplikasi'];
 	$namasekolah = $ceks['sekolah'];
@@ -12,11 +12,10 @@ require("../config/config.default.php");
 				
 		$username = $_POST['username'];
 		$password = $_POST['password'];
-		$query = mysqli_query($koneksi,"SELECT * FROM pengawas WHERE username='$username'");
+		$query = mysql_query("SELECT * FROM pengawas WHERE username='$username'");
 		
-		$cek = mysqli_num_rows($query);
-		$user = mysqli_fetch_array($query);
-		
+		$cek = mysql_num_rows($query);
+		$user = mysql_fetch_array($query);
 		
 		if($cek <> 0 ) {
 			
@@ -26,7 +25,7 @@ require("../config/config.default.php");
 				$info = info("Password salah!","NO");
 			} else {
 				$_SESSION['id_pengawas'] = $user['id_pengawas'];
-				header('location:.');
+				header('location: ./');
 			}
 		}elseif($user['level']=='guru'){
 			
